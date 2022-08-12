@@ -32,3 +32,45 @@ function corFavorita(cor) {
 addEventListener('click', function () {
   console.log('oi');
 });
+
+// FUNÇÕES 2
+
+function imc2(peso, altura) {
+  const imc = peso / altura ** 2;
+  console.log(imc);
+}
+
+imc2(85, 1.8);
+
+function terceiraIdade(idade) {
+  console.log(typeof idade);
+  if (typeof idade !== 'number') {
+    return 'Por favor, preencha um número';
+  } else if (idade >= 60) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(terceiraIdade('oi'));
+
+function faltaVisitar(paisesVisitados) {
+  var totalPaises = 193;
+  return `Falta visitar ${totalPaises - paisesVisitados} países`;
+}
+
+var profissao = 'Web Developer';
+
+function dados() {
+  var nome = 'William';
+  var idade = 30;
+  function outrosDados() {
+    var endereco = 'Enniscorthy';
+    var idade = 33;
+    return `${nome}, ${idade}, ${endereco}, ${profissao}`;
+  }
+  return outrosDados();
+}
+
+console.log(dados());
